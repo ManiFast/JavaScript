@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	button:hover {
+		border: solid grey 1px;
+		background: rgb(255,0,224);
+		background: linear-gradient(144deg, rgba(255,0,224,1) 20%, rgba(255,0,0,1) 100%);
+		color: white;
+		outline: none;
+	}
+
+	input {
+		font-size: 32.5px;
+		:-webkit-input-placeholder {color:#c0392b;}
+	}
+
+	input[type="number"]::placeholder {
+		font-size: 15px;
+		color: crimson;
+	}
+
+	button {
+		font-size: 25px;
+	}
+
+	#outport {
+		text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	}
+</style>
+<body style="margin: 0; padding: 0;">
+	<div class="box">
+		<input id="inputIn" style="border: solid grey 1px; border-bottom: solid white 1px; outline: none; direction: rtl; margin-top: 50px; margin-left: 50px; height: 35px; width: 196px; float: left;" type="number" placeholder="First number">
+		<input id="inputIn_2" style="border: solid grey 1px; border-top: solid white 1px; outline: none; direction: rtl; margin-top: 0px; margin-left: 50px; height: 35px; width: 196px; float: left; clear: both;" type="number" placeholder="Second number">
+		<button id="button"   onclick="plus()" style="width: 51px; height: 50px; border: 0; margin-left: 48px; float: left; clear: both;">+</button>
+		<button id="button_2" onclick="minus()" style="width: 51px; height: 50px; border: 0; float: left;">-</button>
+		<button id="button_3" onclick="multiply()" style="width: 51px; height: 50px; border: 0; float: left;">*</button>
+		<button id="button_4" onclick="split()" style="width: 51px; height: 50px; border: 0; float: left;">/</button>
+		<button class="clear" onclick="clearDisplay()" style="width: 51px; height: 50px; border: 0; float: left;"">C</button>
+		<h4 style="margin-left: 50px; font-style: italic; clear: both;">Result</h4>
+		<div id="outport" style="margin-left: 50px; height: 30px; width: 300px; float: left; clear: both; color: red; font-size: 30px;"></div>
+	</div>
+
+	<script>
+		 
+		function clearDisplay(){
+			
+  var inputIn, inputIn_2;
+	 document.getElementById('inputIn').value = 0;
+  inputIn_2 = document.getElementById('inputIn_2');
+  inputIn = 0;
+  inputIn_2.value = 0;
+}
+
+
+function plus(){
+	var inputIn, inputIn_2, outport, result;
+	inputIn = document.getElementById('inputIn').value;
+	inputIn_2 = document.getElementById('inputIn_2').value;
+	inputIn = parseInt(inputIn);
+	inputIn_2 = parseInt(inputIn_2);
+	
+  result = inputIn + inputIn_2;
+  outport = document.getElementById('outport').innerHTML = result;
+}
+
+function minus(){
+	var inputIn, inputIn_2, outport, result;
+	inputIn = document.getElementById('inputIn').value;
+	inputIn_2 = document.getElementById('inputIn_2').value;
+	inputIn = parseInt(inputIn);
+	inputIn_2 = parseInt(inputIn_2);
+	
+  result = inputIn - inputIn_2;
+  outport = document.getElementById('outport').innerHTML = result;
+}
+
+function multiply(){
+	var inputIn, inputIn_2, outport, result;
+	inputIn = document.getElementById('inputIn').value;
+	inputIn_2 = document.getElementById('inputIn_2').value;
+	inputIn = parseInt(inputIn);
+	inputIn_2 = parseInt(inputIn_2);
+	
+  result = inputIn * inputIn_2;
+  outport = document.getElementById('outport').innerHTML = result;
+}
+
+function split(){
+	var inputIn, inputIn_2, outport, result;
+	inputIn = document.getElementById('inputIn').value;
+	inputIn_2 = document.getElementById('inputIn_2').value;
+	inputIn = parseInt(inputIn);
+	inputIn_2 = parseInt(inputIn_2);
+	
+  result = inputIn / inputIn_2;
+  outport = document.getElementById('outport').innerHTML = result;
+}
+
+
+// =========================================================
+
+// var inputIn = document.getElementById("inputIn").value;
+// inputIn = parseInt(inputIn);
+// var inputIn_2 = document.getElementById("inputIn_2").value;
+// inputIn_2 = parseInt(inputIn_2);
+// var outport = document.getElementById("outport");
+// var result;
+
+// var inputIn = Number(document.getElementById("inputIn").value);
+// inputIn = parseInt(inputIn);
+// var inputIn_2 = Number(document.getElementById("inputIn_2").value);
+// inputIn_2 = parseInt(inputIn_2);
+// var outport = document.getElementById("outport");
+// var result;
+
+// function plus(){
+// 	result = inputIn + inputIn_2;
+// 	outport.innerHTML = result;
+// }
+
+//==========================================================
+
+// var inputIn = Number(document.getElementById("inputIn").value);
+// var inputIn_2 = Number(document.getElementById("inputIn_2").value);
+// var outport = document.getElementById("outport");
+
+// console.log("test");
+
+// var btn = document.getElementById("button");
+// var btn_2 = document.getElementById("button_2");
+// var btn_3 = document.getElementById("button_3");
+// var btn_4 = document.getElementById("button_4");
+
+// function plus(){
+// 	var result = parseInt(inputIn) + parseInt(inputIn_2);
+// 	outport.innerHTML = result;
+
+// 	inputIn.value = "";
+// 	inputIn_2.value = "";
+// 	console.log("test_1");
+// }
+	</script>
+
+	<!-- <script src="JS/script.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/stylesheet.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box">
+		<input id="inputIn" type="number" placeholder="0.00">
+		<div class="box-2">
+			<div class="grid-item clear">
+				<button onclick="clearr()" id="clear" class="button-clear buttons-grid">C</button>
+			</div>
+			<!-- <div class="grid-item">
+				<button class="button- buttons-grid"></button>
+			</div> -->
+			<div class="grid-item">
+				<button class="button-back buttons-grid"><img style="float: left; margin-left: -2.5px;" width="110%" height="80%" src="clear.png" alt="<--"></button>
+			</div>
+			<div class="grid-item">
+				<button onclick="plus()" id="plus" value="+" class="button-plus buttons-grid operator">+</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_7()" class="button-7 buttons-grid">7</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_8()" class="button-8 buttons-grid">8</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_9()" class="button-9 buttons-grid">9</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="minuss()" id="minus" value="-" class="button-minus buttons-grid operator">-</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_4()" class="button-4 buttons-grid">4</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_5()" class="button-5 buttons-grid">5</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_6()" class="button-6 buttons-grid">6</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="multiply()" class="button-multiplay buttons-grid operator">*</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_1()" class="button-1 buttons-grid">1</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_2()" class="button-2 buttons-grid">2</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="num_3()" class="button-3 buttons-grid">3</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="split()" class="button-split buttons-grid operator">/</button>
+			</div>
+			<!-- <div class="grid-item">
+				<button class="button- buttons-grid"></button>
+			</div> -->
+			<div class="grid-item num-0">
+				<button onclick="num_0()" class="button-0 buttons-grid">0</button>
+			</div>
+			<div class="grid-item">
+				<button onclick="point()" class="button-point buttons-grid">.</button>
+			</div>
+			<div class="grid-item result">
+				<button id="do_it" onclick="result()" value="=" class="button-result buttons-grid">=</button>
+			</div>
+		</div><!-- box-2 -->
+	</div>
+	<script src="JS/scriptC.js"></script>
+</body>
+</html>
